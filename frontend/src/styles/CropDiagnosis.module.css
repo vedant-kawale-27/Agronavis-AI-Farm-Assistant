@@ -1,0 +1,185 @@
+/* CropDiagnosis styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+  padding: 16px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.weatherInfo {
+  display: flex;
+  align-items: center;
+}
+
+.profileIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.temperature {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+  padding: 8px 0;
+  margin-right: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #666;
+  position: relative;
+  font-size: 14px;
+}
+
+.activeTab {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff0000;
+}
+
+.content {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.testCropTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.diagnosisSteps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28%;
+}
+
+.stepIcon {
+  margin-bottom: 8px;
+}
+
+.stepText {
+  text-align: center;
+  font-size: 12px;
+}
+
+.stepArrow {
+  font-size: 20px;
+  color: #777;
+}
+
+.takePictureButton {
+  background-color: #8a56e3;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+}
+
+.featuresSection {
+  margin-bottom: 24px;
+}
+
+.featuresTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.featureIcon {
+  font-size: 24px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureText {
+  font-size: 12px;
+  text-align: center;
+}
+
+.bottomNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  margin-top: auto;
+  border-top: 1px solid #eee;
+}
+
+.navButton {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

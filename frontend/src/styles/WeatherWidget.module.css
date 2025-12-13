@@ -1,0 +1,713 @@
+/* Weather Widget mobile-optimized styles */
+.weatherContainer {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding-bottom: 1rem;
+}
+
+.topContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.weatherBlockContainer {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+}
+
+/* Compact styles for Dashboard usage */
+.weatherBlockContainer.compact {
+  padding: 8px;
+}
+
+.compact .weatherHeader {
+  margin-bottom: 12px;
+}
+
+.compact .location {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.compact .date {
+  font-size: 0.7rem;
+}
+
+.compact .temperature {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.compact .condition {
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.compact .weatherDetails {
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.compact .weatherDetail {
+  font-size: 0.7rem;
+}
+
+/* Loading and Error States */
+.weatherLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.loadingSpinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingText {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.weatherError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.errorIcon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.errorText {
+  font-size: 0.8rem;
+  color: #d32f2f;
+  line-height: 1.4;
+}
+
+.weatherHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.weatherMain {
+  margin-bottom: 0.75rem;
+}
+
+/* Left block: text */
+.locationContainer .left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.location {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date {
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+/* Right block: temp + icon */
+.temperature {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  text-align: right;
+}
+
+.weatherIcon {
+  font-size: 1.35rem;
+  margin-top: 2px;
+  display: inline-block;
+  text-align: right;
+}
+
+/* short condition line under location */
+.condition {
+  font-size: 0.72rem;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* small details row */
+.weatherDetails {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+/* responsive: shrink width on very small screens */
+@media (max-width: 420px) {
+  .locationContainer {
+    width: 92%;
+    padding: 0.6rem 0.85rem;
+    gap: 0.5rem;
+  }
+  .temperature { font-size: 1.05rem; }
+  .weatherIcon { font-size: 1.15rem; }
+}
+
+.weatherDetail {
+  display: flex;
+  align-items: center;
+  font-size: 0.72rem;
+  color: #6B7280;
+}
+
+.weatherDetailIcon {
+  margin-right: 0.25rem;
+  color: #6B7280;
+  font-size: 0.8rem;
+}
+
+/* Camera Module Styles */
+.cameraModuleContainer {
+  padding: 1rem;
+  margin: 1.5rem 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.diagnosisStepsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.diagnosisStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 28%;
+}
+
+.diagnosisStepIcon {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  background-color: #f9fafb;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e7eb;
+}
+
+.diagnosisStepText {
+  font-size: 0.75rem;
+  color: #374151;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.stepArrow {
+  font-size: 1.25rem;
+  color: #9ca3af;
+}
+
+.takePictureButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(90deg, #8a65e9 0%, #6875f5 100%);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.takePictureButton:hover {
+  background: linear-gradient(90deg, #7955e0 0%, #5565e0 100%);
+}
+
+.cameraViewContainer {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.capturedImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.diagnosisResult {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #166534;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.buttonSecondary {
+  flex: 1;
+  padding: 0.75rem;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buttonSecondary:hover {
+  background-color: #e5e7eb;
+}
+
+.minMaxTemp {
+  font-size: 0.875rem;
+  color: #4B5563;
+  margin-top: 0.25rem;
+}
+
+/* Crop icons styles */
+.cropIconsContainer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.75rem 1rem;
+}
+
+.cropIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cropIconCircle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  border: 2px solid #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.cropIconCircle.active {
+  border-color: #10B981;
+}
+
+.statusIndicator {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.statusGood {
+  background-color: #10B981;
+}
+
+.statusWarning {
+  background-color: #F59E0B;
+}
+
+.statusDanger {
+  background-color: #EF4444;
+}
+
+.cropIconImage {
+  font-size: 1.75rem; /* Icon size instead of width/height for emoji */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cropName {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Crop Details Styles */
+.cropDetailsContainer {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f8fafc;
+  border-radius: 0.75rem;
+}
+
+.cropDetails {
+  width: 100%;
+}
+
+.cropDetailHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cropDetailEmoji {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.cropDetailName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.cropDetailStatus {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.statusTextGood {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.statusTextWarning {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.statusTextDanger {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.cropDetailInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cropInfoItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.cropInfoLabel {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.cropInfoValue {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.cropProgress {
+  margin-bottom: 1rem;
+}
+
+.cropProgressLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.cropProgressBar {
+  height: 0.5rem;
+  background-color: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.cropProgressFill {
+  height: 100%;
+  background-color: #22c55e;
+  border-radius: 999px;
+}
+
+.cropNextStage {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #eef2ff;
+  border-radius: 0.5rem;
+}
+
+.cropNextStageIcon {
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.cropNextStageInfo {
+  flex: 1;
+}
+
+.cropNextStageTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.cropNextStageDays {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+/* Placeholder for future profile styles if needed */
+
+/* Task item styles are defined below in the specific tasks section */
+
+.taskIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #F3F4F6;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+}
+
+.taskContent {
+  flex: 1;
+}
+
+.taskTitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #1F2937;
+}
+
+.taskDueTime {
+  font-size: 0.625rem;
+  color: #EF4444;
+}
+
+.taskStatusIcon {
+  font-size: 1rem;
+}
+
+/* Simplified crop progress section - we're using cropProgress classes from above */
+
+/* Tasks and Alerts Container */
+.tasksAlertsContainer {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+.sectionContainer {
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Tasks Section */
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.taskIcon {
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.taskContent {
+  flex: 1;
+}
+
+.taskTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.taskDueTime {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.taskPriority {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.priorityUrgent {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.priorityHigh {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.priorityMedium {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.priorityLow {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.alertsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.alertItem {
+  display: flex;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  align-items: center;
+  border-left: 3px solid transparent;
+}
+
+.alertItem.critical {
+  border-color: #EF4444;
+}
+
+.alertItem.warning {
+  border-color: #F59E0B;
+}
+
+.alertItem.advisory {
+  border-color: #10B981;
+}
+
+.alertItem.info {
+  border-color: #3B82F6;
+}
+
+.alertIcon {
+  margin-right: 0.5rem;
+}
+
+.alertMessage {
+  font-size: 0.75rem;
+  color: #4B5563;
+}
+
+/* Navigation styles removed - not used */
+
+/* End of styles */
+
+.popularCities {
+  margin-top: 0.5rem;
+}
+
+.popularCitiesTitle {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-bottom: 0.25rem;
+}
+
+.cityButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.cityButton {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  background-color: #F3F4F6;
+  border-radius: 0.25rem;
+}
+
+.cityButton:hover {
+  background-color: #E5E7EB;
+}

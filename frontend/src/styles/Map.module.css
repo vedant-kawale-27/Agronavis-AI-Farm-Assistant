@@ -1,0 +1,41 @@
+.mapContainer {
+  width: 100%;
+  border-radius: 0.375rem;
+}
+
+.mapHeight {
+  height: 400px;
+}
+
+.mapHeightSmall {
+  height: 250px;
+}
+
+.mapHeightFull {
+  height: 100%;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorContainer {
+  text-align: center;
+  color: #ef4444;
+}
+
+.noDataContainer {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+}
+
+.mapControlContainer {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

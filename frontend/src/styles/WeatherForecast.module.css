@@ -1,0 +1,193 @@
+/* WeatherForecast styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.currentWeatherCard {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.currentWeatherTop {
+  margin-bottom: 16px;
+}
+
+.currentDate {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.currentWeatherContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.temperatureContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.unit {
+  font-size: 28px;
+}
+
+.conditionContainer {
+  margin-top: 8px;
+}
+
+.condition {
+  font-weight: 500;
+}
+
+.location {
+  font-weight: 500;
+}
+
+.humidity {
+  margin-top: 8px;
+}
+
+.weatherIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecastTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.forecastGrid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.forecastDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+.forecastDayName {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.forecastTemp {
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.forecastNote {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.bottomNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  margin-top: auto;
+  border-top: 1px solid #eee;
+}
+
+.navButton {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Loading and Error states */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.loading {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  text-align: center;
+}
+
+.error {
+  font-size: 18px;
+  color: #d32f2f;
+  margin-bottom: 16px;
+}
+
+.retryButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.retryButton:hover {
+  background-color: #45a049;
+}

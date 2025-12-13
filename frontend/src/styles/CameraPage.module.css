@@ -1,0 +1,412 @@
+/* CameraPage.module.css */
+.container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #007bff;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Selection Mode */
+.selectionContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-image: url('/images/backgroundcamera.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 300px;
+}
+
+.optionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.optionButton {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 24px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.optionButton:hover {
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.optionIcon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.optionText {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.optionDesc {
+  font-size: 14px;
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Camera Mode */
+.cameraContainer {
+  position: relative;
+  flex: 1;
+  background: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  z-index: 5;
+}
+
+.cameraOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.focusRectangle {
+  width: 280px;
+  height: 200px;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+.instructionText {
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* Corner indicators */
+.cornerTL, .cornerTR, .cornerBL, .cornerBR {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #00ff00;
+}
+
+.cornerTL {
+  top: -3px;
+  left: -3px;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 8px 0 0 0;
+}
+
+.cornerTR {
+  top: -3px;
+  right: -3px;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 8px 0 0;
+}
+
+.cornerBL {
+  bottom: -3px;
+  left: -3px;
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 8px;
+}
+
+.cornerBR {
+  bottom: -3px;
+  right: -3px;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 8px 0;
+}
+
+.cameraControls {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 4;
+}
+
+.cancelButton {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.captureButton {
+  background: white;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s;
+}
+
+.captureButton:active {
+  transform: scale(0.95);
+}
+
+.captureInner {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.placeholder {
+  width: 80px;
+}
+
+/* Preview Mode */
+.previewContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagePreview {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  min-height: 400px;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.previewOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.previewRectangle {
+  width: 280px;
+  height: 200px;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+.previewControls {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: white;
+}
+
+.retakeButton {
+  flex: 1;
+  background: white;
+  border: 2px solid #6c757d;
+  color: #6c757d;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.retakeButton:hover {
+  background: #6c757d;
+  color: white;
+}
+
+.submitButton {
+  flex: 2;
+  background: #28a745;
+  border: none;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background: #218838;
+}
+
+/* Hidden elements */
+.hiddenInput {
+  display: none;
+}
+
+.hiddenCanvas {
+  display: none;
+}
+
+.debugInfo {
+  padding: 10px;
+  background: #f0f0f0;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+/* Analysis Loading Styles */
+.analysisLoader {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 123, 255, 0.2);
+}
+
+.analysisLoader p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 123, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  animation: progress 2s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.errorMessage {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  border-radius: 8px;
+  color: #dc3545;
+  text-align: center;
+}
+
+.previewControls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

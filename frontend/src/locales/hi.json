@@ -1,0 +1,169 @@
+{
+  "common": {
+    "back": "वापस",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "success": "सफल",
+    "retry": "पुनः प्रयास करें",
+    "close": "बंद करें",
+    "yes": "हाँ",
+    "no": "नहीं"
+  },
+  "navigation": {
+    "home": "मुख्य पृष्ठ",
+    "dashboard": "डैशबोर्ड",
+    "camera": "कैमरा",
+    "reports": "रिपोर्ट",
+    "settings": "सेटिंग्स"
+  },
+  "camera": {
+    "title": "पौधे का विश्लेषण",
+    "subtitle": "अपनी पौधे की छवि जोड़ने का तरीका चुनें",
+    "takePhoto": "फोटो लें",
+    "takePhotoDesc": "पौधे की छवि कैप्चर करने के लिए कैमरा का उपयोग करें",
+    "uploadImage": "छवि अपलोड करें",
+    "uploadImageDesc": "अपने डिवाइस गैलरी से चुनें",
+    "instructionText": "पौधे को फ्रेम के भीतर रखें",
+    "capture": "कैप्चर करें",
+    "retake": "दोबारा लें",
+    "analyzePlant": "पौधे का विश्लेषण करें",
+    "analyzing": "विश्लेषण हो रहा है...",
+    "analysisProgress": "🔬 AI के साथ आपकी पौधे की छवि का विश्लेषण हो रहा है...",
+    "startingCamera": "कैमरा शुरू हो रहा है...",
+    "errors": {
+      "cameraPermission": "कैमरा एक्सेस करने में असफल। कृपया अनुमतियाँ जांचें।",
+      "videoPlayback": "वीडियो प्लेबैक शुरू करने में असफल।",
+      "analysisError": "छवि का विश्लेषण करने में असफल। कृपया पुनः प्रयास करें।",
+      "noImage": "कोई छवि कैप्चर नहीं की गई"
+    }
+  },
+  "report": {
+    "title": "विश्लेषण रिपोर्ट",
+    "subtitle": "AI-संचालित पौधे स्वास्थ्य मूल्यांकन",
+    "loading": "विश्लेषण रिपोर्ट लोड हो रही है...",
+    "generatedOn": "उत्पन्न किया गया",
+    "at": "पर",
+    "summary": {
+      "totalDetections": "कुल पहचान",
+      "diseaseCount": "रोग की संख्या",
+      "pestCount": "कीट की संख्या",
+      "avgConfidence": "औसत विश्वास",
+      "issuesIdentified": "पहचानी गई समस्याएं",
+      "plantDiseasesFound": "पौधे के रोग मिले",
+      "pestsDetected": "कीट पाए गए",
+      "modelCertainty": "मॉडल निश्चितता"
+    },
+    "errors": {
+      "title": "रिपोर्ट लोड करने में त्रुटि",
+      "noData": "कोई विश्लेषण परिणाम नहीं मिला। कृपया पहले एक फोटो लें।"
+    },
+    "severity": {
+      "low": "कम गंभीरता",
+      "medium": "मध्यम गंभीरता",
+      "high": "उच्च गंभीरता"
+    },
+    "detections": {
+      "diseases": "रोग पहचान",
+      "pests": "कीट पहचान",
+      "plantDisease": "पौधे का रोग",
+      "pest": "कीट",
+      "disease": "रोग",
+      "location": "स्थान",
+      "confidence": "विश्वास"
+    },
+    "actions": {
+      "saveReport": "रिपोर्ट सहेजें",
+      "retakePhoto": "फोटो दोबारा लें",
+      "newAnalysis": "नया विश्लेषण",
+      "printReport": "रिपोर्ट प्रिंट करें",
+      "downloadJSON": "JSON डाउनलोड करें"
+    },
+    "footer": {
+      "poweredBy": "AgroNavis AI द्वारा उत्पन्न • द्विगुणित YOLO मॉडल द्वारा संचालित",
+      "disclaimer": "यह विश्लेषण मार्गदर्शन उद्देश्यों के लिए है। महत्वपूर्ण निर्णयों के लिए कृषि विशेषज्ञों से सलाह लें।"
+    },
+    "recommendations": "सिफारिशें"
+  },
+  "weather": {
+    "loading": "मौसम लोड हो रहा है...",
+    "humidity": "नमी",
+    "wind": "हवा",
+    "errors": {
+      "locationRequired": "मौसम डेटा के लिए स्थान पहुंच की आवश्यकता है",
+      "locationNotAvailable": "स्थान उपलब्ध नहीं है",
+      "apiKeyNotConfigured": "मौसम API कुंजी कॉन्फ़िगर नहीं की गई",
+      "coordinatesNotAvailable": "स्थान निर्देशांक उपलब्ध नहीं हैं",
+      "fetchFailed": "मौसम डेटा प्राप्त करने में असफल"
+    },
+    "forecast": {
+      "title": "मौसम पूर्वानुमान",
+      "sectionTitle": "मौसम",
+      "loading": "मौसम डेटा लोड हो रहा है...",
+      "locationError": "स्थान प्राप्त करने में असमर्थ। कृपया स्थान पहुंच सक्षम करें।",
+      "browserError": "यह ब्राउज़र भौगोलिक स्थान का समर्थन नहीं करता।",
+      "nextDays": "अगले {{count}} दिन",
+      "forecastNote": "अगले {{count}} दिनों का मौसम पूर्वानुमान",
+      "retry": "फिर से कोशिश करें"
+    }
+  },
+  "dashboard": {
+    "title": "फार्म मॉनिटरिंग डैशबोर्ड",
+    "welcome": "स्वागत है",
+    "signOut": "साइन आउट",
+    "menu": {
+      "settings": "सेटिंग्स",
+      "legalNotices": "कानूनी सूचनाएं",
+      "contact": "संपर्क",
+      "sales": "बिक्री"
+    },
+    "cropDiagnosis": {
+      "title": "ई-फसल निदान",
+      "testYourCrop": "अपनी फसल का परीक्षण करें",
+      "steps": {
+        "takePicture": "एक तस्वीर लें",
+        "seeDiagnosis": "निदान और उपचार देखें",
+        "getMedicine": "दवा प्राप्त करें"
+      }
+    },
+    "features": {
+      "title": "सभी सुविधाएं",
+      "governmentScheme": "सरकारी योजना",
+      "reportsAndTreatment": "रिपोर्ट और उपचार",
+      "fertilizerCalculator": "उर्वरक कैलकुलेटर",
+      "diseaseLibrary": "रोग पुस्तकालय",
+      "automaticWater": "पानी के लिए स्वचालित प्रणाली",
+      "seeds": "बीज"
+    },
+    "navigation": {
+      "crop": "फसल",
+      "community": "समुदाय",
+      "shop": "दुकान",
+      "you": "आप"
+    }
+  },
+  "diseases": {
+    "corn_leaf_blight": "मक्का पत्ती झुलसा",
+    "rice_leaf_roller": "चावल पत्ती रोलर",
+    "bacterial_blight": "जीवाणु झुलसा",
+    "brown_spot": "भूरा धब्बा",
+    "leaf_smut": "पत्ती कंडुआ"
+  },
+  "language": {
+    "english": "English",
+    "hindi": "हिंदी",
+    "bengali": "বাংলা",
+    "selectLanguage": "भाषा चुनें"
+  },
+  "analytics": {
+    "title": "कृषि विश्लेषण",
+    "loading": "लोड हो रहा है...",
+    "error": "डेटा लोड करने में त्रुटि: {{error}}",
+    "noData": "कोई कृषि डेटा उपलब्ध नहीं",
+    "cropPerformance": "फसल प्रदर्शन",
+    "weatherInsights": "मौसम अंतर्दृष्टि",
+    "temperature": "तापमान",
+    "humidity": "नमी"
+  }
+}

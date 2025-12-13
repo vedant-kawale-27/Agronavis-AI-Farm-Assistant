@@ -1,0 +1,169 @@
+{
+  "common": {
+    "back": "ফিরে যান",
+    "save": "সংরক্ষণ করুন",
+    "cancel": "বাতিল করুন",
+    "loading": "লোড হচ্ছে...",
+    "error": "ত্রুটি",
+    "success": "সফল",
+    "retry": "আবার চেষ্টা করুন",
+    "close": "বন্ধ করুন",
+    "yes": "হ্যাঁ",
+    "no": "না"
+  },
+  "navigation": {
+    "home": "হোম",
+    "dashboard": "ড্যাশবোর্ড",
+    "camera": "ক্যামেরা",
+    "reports": "রিপোর্ট",
+    "settings": "সেটিংস"
+  },
+  "camera": {
+    "title": "উদ্ভিদ বিশ্লেষণ",
+    "subtitle": "আপনার উদ্ভিদের ছবি যোগ করার উপায় বেছে নিন",
+    "takePhoto": "ছবি তুলুন",
+    "takePhotoDesc": "উদ্ভিদের ছবি ক্যাপচার করতে ক্যামেরা ব্যবহার করুন",
+    "uploadImage": "ছবি আপলোড করুন",
+    "uploadImageDesc": "আপনার ডিভাইস গ্যালারি থেকে বেছে নিন",
+    "instructionText": "উদ্ভিদটি ফ্রেমের মধ্যে রাখুন",
+    "capture": "ক্যাপচার করুন",
+    "retake": "আবার নিন",
+    "analyzePlant": "উদ্ভিদ বিশ্লেষণ করুন",
+    "analyzing": "বিশ্লেষণ হচ্ছে...",
+    "analysisProgress": "🔬 AI দিয়ে আপনার উদ্ভিদের ছবি বিশ্লেষণ হচ্ছে...",
+    "startingCamera": "ক্যামেরা শুরু হচ্ছে...",
+    "errors": {
+      "cameraPermission": "ক্যামেরা অ্যাক্সেস করতে ব্যর্থ। অনুগ্রহ করে অনুমতি পরীক্ষা করুন।",
+      "videoPlayback": "ভিডিও প্লেব্যাক শুরু করতে ব্যর্থ।",
+      "analysisError": "ছবি বিশ্লেষণ করতে ব্যর্থ। অনুগ্রহ করে আবার চেষ্টা করুন।",
+      "noImage": "কোনো ছবি ক্যাপচার করা হয়নি"
+    }
+  },
+  "report": {
+    "title": "বিশ্লেষণ রিপোর্ট",
+    "subtitle": "AI-চালিত উদ্ভিদ স্বাস্থ্য মূল্যায়ন",
+    "loading": "বিশ্লেষণ রিপোর্ট লোড হচ্ছে...",
+    "generatedOn": "তৈরি হয়েছে",
+    "at": "এ",
+    "summary": {
+      "totalDetections": "মোট সনাক্তকরণ",
+      "diseaseCount": "রোগের সংখ্যা",
+      "pestCount": "পোকার সংখ্যা",
+      "avgConfidence": "গড় আস্থা",
+      "issuesIdentified": "চিহ্নিত সমস্যা",
+      "plantDiseasesFound": "উদ্ভিদের রোগ পাওয়া গেছে",
+      "pestsDetected": "পোকা সনাক্ত করা হয়েছে",
+      "modelCertainty": "মডেল নিশ্চিততা"
+    },
+    "errors": {
+      "title": "রিপোর্ট লোড করতে ত্রুটি",
+      "noData": "কোনো বিশ্লেষণ ফলাফল পাওয়া যায়নি। অনুগ্রহ করে প্রথমে একটি ছবি তুলুন।"
+    },
+    "severity": {
+      "low": "কম তীব্রতা",
+      "medium": "মাঝারি তীব্রতা",
+      "high": "উচ্চ তীব্রতা"
+    },
+    "detections": {
+      "diseases": "রোগ সনাক্তকরণ",
+      "pests": "পোকা সনাক্তকরণ",
+      "plantDisease": "উদ্ভিদের রোগ",
+      "pest": "পোকা",
+      "disease": "রোগ",
+      "location": "অবস্থান",
+      "confidence": "আস্থা"
+    },
+    "actions": {
+      "saveReport": "রিপোর্ট সংরক্ষণ করুন",
+      "retakePhoto": "ছবি আবার নিন",
+      "newAnalysis": "নতুন বিশ্লেষণ",
+      "printReport": "রিপোর্ট প্রিন্ট করুন",
+      "downloadJSON": "JSON ডাউনলোড করুন"
+    },
+    "footer": {
+      "poweredBy": "AgroNavis AI দ্বারা তৈরি • দ্বৈত YOLO মডেল দ্বারা চালিত",
+      "disclaimer": "এই বিশ্লেষণ নির্দেশনার উদ্দেশ্যে। গুরুত্বপূর্ণ সিদ্ধান্তের জন্য কৃষি বিশেষজ্ঞদের সাথে পরামর্শ করুন।"
+    },
+    "recommendations": "সুপারিশ"
+  },
+  "weather": {
+    "loading": "আবহাওয়া লোড হচ্ছে...",
+    "humidity": "আর্দ্রতা",
+    "wind": "বাতাস",
+    "errors": {
+      "locationRequired": "আবহাওয়া ডেটার জন্য অবস্থান অ্যাক্সেস প্রয়োজন",
+      "locationNotAvailable": "অবস্থান উপলব্ধ নেই",
+      "apiKeyNotConfigured": "আবহাওয়া API কী কনফিগার করা হয়নি",
+      "coordinatesNotAvailable": "অবস্থান স্থানাঙ্ক উপলব্ধ নেই",
+      "fetchFailed": "আবহাওয়া ডেটা আনতে ব্যর্থ"
+    },
+    "forecast": {
+      "title": "আবহাওয়ার পূর্বাভাস",
+      "sectionTitle": "আবহাওয়া",
+      "loading": "আবহাওয়া ডেটা লোড হচ্ছে...",
+      "locationError": "অবস্থান পেতে অক্ষম। দয়া করে অবস্থান অ্যাক্সেস সক্ষম করুন।",
+      "browserError": "এই ব্রাউজার ভৌগোলিক অবস্থান সমর্থন করে না।",
+      "nextDays": "পরবর্তী {{count}} দিন",
+      "forecastNote": "পরবর্তী {{count}} দিনের আবহাওয়ার পূর্বাভাস",
+      "retry": "আবার চেষ্টা করুন"
+    }
+  },
+  "dashboard": {
+    "title": "ফার্ম মনিটরিং ড্যাশবোর্ড",
+    "welcome": "স্বাগতম",
+    "signOut": "সাইন আউট",
+    "menu": {
+      "settings": "সেটিংস",
+      "legalNotices": "আইনি বিজ্ঞপ্তি",
+      "contact": "যোগাযোগ",
+      "sales": "বিক্রয়"
+    },
+    "cropDiagnosis": {
+      "title": "ই-ফসল নির্ণয়",
+      "testYourCrop": "আপনার ফসল পরীক্ষা করুন",
+      "steps": {
+        "takePicture": "একটি ছবি নিন",
+        "seeDiagnosis": "নির্ণয় এবং চিকিৎসা দেখুন",
+        "getMedicine": "ওষুধ পান"
+      }
+    },
+    "features": {
+      "title": "সব বৈশিষ্ট্য",
+      "governmentScheme": "সরকারি প্রকল্প",
+      "reportsAndTreatment": "রিপোর্ট এবং চিকিৎসা",
+      "fertilizerCalculator": "সার ক্যালকুলেটর",
+      "diseaseLibrary": "রোগের গ্রন্থাগার",
+      "automaticWater": "পানির জন্য স্বয়ংক্রিয় সিস্টেম",
+      "seeds": "বীজ"
+    },
+    "navigation": {
+      "crop": "ফসল",
+      "community": "সম্প্রদায়",
+      "shop": "দোকান",
+      "you": "আপনি"
+    }
+  },
+  "diseases": {
+    "corn_leaf_blight": "ভুট্টা পাতা ঝলসানো",
+    "rice_leaf_roller": "ধান পাতা রোলার",
+    "bacterial_blight": "ব্যাকটেরিয়াল ব্লাইট",
+    "brown_spot": "বাদামী দাগ",
+    "leaf_smut": "পাতার কালো দাগ"
+  },
+  "language": {
+    "english": "English",
+    "hindi": "हिंदी",
+    "bengali": "বাংলা",
+    "selectLanguage": "ভাষা নির্বাচন করুন"
+  },
+  "analytics": {
+    "title": "কৃষি বিশ্লেষণ",
+    "loading": "লোড হচ্ছে...",
+    "error": "ডেটা লোড করতে ত্রুটি: {{error}}",
+    "noData": "কোন কৃষি ডেটা উপলব্ধ নেই",
+    "cropPerformance": "ফসলের কর্মক্ষমতা",
+    "weatherInsights": "আবহাওয়ার অন্তর্দৃষ্টি",
+    "temperature": "তাপমাত্রা",
+    "humidity": "আর্দ্রতা"
+  }
+}
