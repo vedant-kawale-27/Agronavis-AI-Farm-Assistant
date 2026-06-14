@@ -88,7 +88,7 @@ const DailyTaskReminders: React.FC = () => {
   };
 
   return (
-    <div className={s.card}>
+    <div className={s.card} data-hc-target="true">
       <div className={s.cardHeader}>
         <div>
           <div className={s.cardTitle}>Daily Tasks</div>

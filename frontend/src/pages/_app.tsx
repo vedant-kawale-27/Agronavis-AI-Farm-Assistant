@@ -7,6 +7,8 @@ import '../lib/i18n'
 import '../styles/globals.css'
 import 'leaflet/dist/leaflet.css'
 
+import { useHighContrastMode } from '../hooks/useHighContrastMode'
+
 // Load PWA install prompt only on client (uses browser APIs — no SSR)
 const PWAInstallPrompt = dynamic(
   () => import('../components/PWAInstallPrompt'),
@@ -14,14 +16,7 @@ const PWAInstallPrompt = dynamic(
 );
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    const isHighContrast = localStorage.getItem('high-contrast') === 'true';
-    if (isHighContrast) {
-      document.documentElement.setAttribute('data-theme', 'high-contrast');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-  }, []);
+  useHighContrastMode();
 
   return (
     <AuthProvider>

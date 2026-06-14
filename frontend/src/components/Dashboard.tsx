@@ -288,7 +288,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
 
           {/* Weather + Area */}
           <div className={s.overviewGrid} style={{ marginBottom: 20 }}>
-            <div className={s.weatherCard} style={{ gridColumn: 'span 2' }}>
+            <div className={s.weatherCard} style={{ gridColumn: 'span 2' }} data-hc-target="true">
               <div>
                 <div style={{ fontSize: 13, color: 'var(--color-text-muted)', marginBottom: 2 }}>{t('dashboard.overview.clearSkies')}</div>
                 <div className={s.weatherTemp}>24°C</div>
@@ -313,7 +313,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
               </div>
             </div>
 
-            <div className={s.card} style={{ cursor: 'pointer' }} onClick={() => setActiveTab('farms')}>
+            <div className={s.card} style={{ cursor: 'pointer' }} onClick={() => setActiveTab('farms')} data-hc-target="true">
               <div className={s.cardTitle}>{t('dashboard.overview.totalArea')}</div>
               <div className={s.cardSub}>{t('dashboard.overview.acrossAllFarms')}</div>
               <div style={{ fontSize: 32, fontWeight: 800, color: 'var(--color-text-primary)' }}>
@@ -326,7 +326,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
           {/* Crop Progress + Tasks + Satellite */}
           <div className={s.overviewGrid}>
             {/* Crop progress */}
-            <div className={s.card}>
+            <div className={s.card} data-hc-target="true">
               <div className={s.cardHeader}>
                 <div className={s.cardTitle}>{t('dashboard.overview.cropProgress')}</div>
               </div>
@@ -380,7 +380,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
             <DailyTaskReminders />
 
             {/* Satellite card */}
-            <div className={`${s.card} ${s.satelliteCard}`}>
+            <div className={`${s.card} ${s.satelliteCard}`} data-hc-target="true">
               <div className={s.cardTitle}>{t('dashboard.overview.liveSatellite')}</div>
               <div className={s.cardSub} style={{ marginBottom: 12 }}>{t('dashboard.overview.fieldTelemetry')}</div>
               <div className={s.mapPlaceholder}>
@@ -463,7 +463,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
                 {farms.map(farm => {
                   const fnpk = NPK_BY_SOIL[farm.soil_type || 'default'] || NPK_BY_SOIL.default;
                   return (
-                    <div key={farm.id} className={s.farmCard} onClick={() => { setSelectedFarmId(farm.id); setActiveTab('map'); }}>
+                    <div key={farm.id} className={s.farmCard} onClick={() => { setSelectedFarmId(farm.id); setActiveTab('map'); }} data-hc-target="true">
                       <div className={s.farmCardImg}>
                         <span className={s.farmCardPremiumBadge}>
                           {farm.soil_type?.toUpperCase() || 'LOAMY'} SOIL
@@ -514,7 +514,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
               </div>
 
               {farms[0] && (
-                <div className={s.insightCard}>
+                <div className={s.insightCard} data-hc-target="true">
                   <div className={s.insightTitle}>Quick Fertilizer Insight</div>
                   <div className={s.insightSub}>Based on soil profile for {farms[0].name}.</div>
                   <div className={s.insightRow}>
@@ -572,7 +572,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
             />
           ) : crops.length === 0 ? (
             /* Farms exist but no crops yet — show the hero illustrated empty state */
-            <div className={s.card} style={{ padding: '8px 0' }}>
+            <div className={s.card} style={{ padding: '8px 0' }} data-hc-target="true">
               <EmptyState
                 variant="crops"
                 title={t('dashboard.emptyStates.crops.title')}
@@ -596,7 +596,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
                 const sowingLabel = parseDate(crop.sowing_date);
                 const harvestLabel = parseDate(crop.expected_harvest_date);
                 return (
-                  <div key={crop.id} className={s.farmCard} style={{ cursor: 'default' }}>
+                  <div key={crop.id} className={s.farmCard} style={{ cursor: 'default' }} data-hc-target="true">
                     {/* Card header */}
                     <div className={s.farmCardImg} style={{ background: 'linear-gradient(160deg, #052e16, #14532d)' }}>
                       <span className={s.farmCardPremiumBadge}>{stage.toUpperCase()}</span>
@@ -758,7 +758,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
 
               {/* ── Saved fields list ── */}
               {fields.length > 0 ? (
-                  <div style={{ background: 'white', border: '1px solid var(--color-border)', borderRadius: 14, overflow: 'hidden' }}>
+                  <div style={{ background: 'white', border: '1px solid var(--color-border)', borderRadius: 14, overflow: 'hidden' }} data-hc-target="true">
                     <div style={{ padding: '14px 20px', borderBottom: '1px solid var(--color-border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                       <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--color-text-primary)' }}>
                         Mapped Fields
@@ -911,7 +911,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
                 { name: 'DAP (18-46-0)',  color: '#f97316', lbs: dosage.dap,   tons: dapTons,  note: 'N+P source' },
                 { name: 'MOP (0-0-60)',   color: '#6366f1', lbs: dosage.potash,tons: potashTons,note: 'Potassium source' },
               ].map(item => (
-                <div key={item.name} className={s.dosageItem}>
+                <div key={item.name} className={s.dosageItem} data-hc-target="true">
                   <FertDot color={item.color} />
                   <div className={s.dosageInfo}>
                     <div className={s.dosageName}>{item.name}</div>
@@ -939,7 +939,7 @@ const Dashboard: React.FC<Props> = ({ activeTab, setActiveTab }) => {
                 { name: 'DAP (18-46-0) — 50 kg bag',  color: '#f97316', bags: dapBags,   tons: dapTons },
                 { name: 'MOP (0-0-60) — 50 kg bag',   color: '#6366f1', bags: potashBags,tons: potashTons },
               ].map(item => (
-                <div key={item.name} className={s.shoppingItem}>
+                <div key={item.name} className={s.shoppingItem} data-hc-target="true">
                   <div className={s.shoppingIcon}>
                     <div style={{ width: 10, height: 10, borderRadius: '50%', background: item.color }} />
                   </div>

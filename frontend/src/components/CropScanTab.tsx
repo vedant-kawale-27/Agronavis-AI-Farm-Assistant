@@ -235,7 +235,7 @@ const CropScanTab: React.FC = () => {
           </div>
 
           {/* Upload card */}
-          <div className={styles.uploadCard}>
+          <div className={styles.uploadCard} data-hc-target="true">
 
             {/* Preview or drop zone */}
             {previewUrl ? (
@@ -309,7 +309,7 @@ const CropScanTab: React.FC = () => {
 
           {/* Result card */}
           {result ? (
-            <div className={styles.resultCard}>
+            <div className={styles.resultCard} data-hc-target="true">
               {/* Header */}
               <div className={`${styles.resultHeader} ${resultHeaderClass}`}>
                 <div className={styles.resultIcon}>
@@ -411,7 +411,7 @@ const CropScanTab: React.FC = () => {
           )}
 
           {/* Scan history */}
-          <div className={styles.historyCard}>
+          <div className={styles.historyCard} data-hc-target="true">
             <div className={styles.historyTitle}>
               <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <IconHistory />

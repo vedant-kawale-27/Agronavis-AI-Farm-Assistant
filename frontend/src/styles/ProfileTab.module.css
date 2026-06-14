@@ -386,7 +386,6 @@
 /* High Contrast state overrides for switch components */
 :global([data-theme='high-contrast']) .slider {
   border: 3px solid #000000 !important;
-  background-color: #ffffff !important;
   background: #ffffff !important;
 }
 
@@ -396,7 +395,6 @@
 }
 
 :global([data-theme='high-contrast']) .switch input:checked + .slider {
-  background-color: #000000 !important;
   background: #000000 !important;
 }
 
