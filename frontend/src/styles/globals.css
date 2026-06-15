@@ -115,6 +115,34 @@ input, select, textarea {
     width: 100%;
   }
 }
+/* Chatbot Markdown Styles */
+.chatbot-markdown-content p {
+  margin-bottom: 0.5em;
+}
+.chatbot-markdown-content p:last-child {
+  margin-bottom: 0;
+}
+.chatbot-markdown-content strong {
+  font-weight: 600;
+}
+.chatbot-markdown-content ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+.chatbot-markdown-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+.chatbot-markdown-content li {
+  margin-bottom: 0.25em;
+}
+.chatbot-markdown-content a {
+  text-decoration: underline;
+  color: inherit;
+}
+
 
 /* ============================================================
    AgroNavis — High Contrast Mode (Direct Sunlight Visibility)
@@ -264,4 +292,4 @@ input, select, textarea {
 [data-theme='high-contrast'] [data-hc-state="selected"] span,
 [data-theme='high-contrast'] [data-hc-state="selected"] div {
   color: #fff !important;
-}
+}

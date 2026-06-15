@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 
 export function useHighContrastMode() {
-  const [highContrast, setHighContrast] = useState(() => {
+  const [highContrast, setHighContrast] = useState(false);
+
+  useEffect(() => {
     try {
-      if (typeof window !== 'undefined') {
-        return localStorage.getItem('high-contrast') === 'true';
+      const stored = localStorage.getItem('high-contrast') === 'true';
+      if (stored !== highContrast) {
+        setHighContrast(stored);
       }
     } catch (err) {
       console.error('Failed to read high-contrast from localStorage:', err);
     }
-    return false;
-  });
+  }, []); // Run once on mount
 
   useEffect(() => {
     if (highContrast) {
